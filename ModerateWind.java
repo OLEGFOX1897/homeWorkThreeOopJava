@@ -1,0 +1,3 @@
+class ModerateWind extends Wind {
+    
+}
