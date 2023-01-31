@@ -1,5 +1,9 @@
 class PowerWind extends Wind {
-    private String windDirection;
+    protected String windDirection;
+
+    public PowerWind(String nameWind, String cityWind, double speedWind, String precipitation) {
+        super(nameWind, cityWind, speedWind, precipitation);
+    }
 
     protected void setWindDirection(String windDirection) {
         this.windDirection = windDirection;
@@ -9,16 +13,16 @@ class PowerWind extends Wind {
         return windDirection;
     }
 
-    void showSpecificationWind (String nameWind, double speed, String cityWind,
-                                String precipitation, String windDirection) {
-        setNameWind(nameWind);
-        setSpeedWind(speed);
-        setCityWind(cityWind);
-        setPrecipitation(precipitation);
-
-        showSpecificationWind();
-
+    protected void showSpecificationWind (String windDirection){
         setWindDirection(windDirection);
+        System.out.println("Название ветра: "+getNameWind());
+        System.out.println("Скорость ветра : "+getSpeedWind()+"км/ч");
+        System.out.println("Осадки в потоке воздуха: "+getPrecipitation());
+        System.out.println("Город: "+getCityWind());
         System.out.println("Направление ветра: "+getWindDirection());
+
+
+
+
     }
 }

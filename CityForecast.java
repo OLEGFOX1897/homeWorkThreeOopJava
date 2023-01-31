@@ -1,8 +1,9 @@
 
+public class CityForecast implements I_WeatherForecast {
+/**
+ * Рекомендации для жителей города.
+ */
 
-public class City implements WeatherForecast {
-
-  
 
     @Override
     public void weatherForecast(Double speedWind) {
@@ -15,7 +16,6 @@ public class City implements WeatherForecast {
         else if (speedWind>12) {
             System.out.println("Нужна эвакуация");
         }
-        
     }
 
  
